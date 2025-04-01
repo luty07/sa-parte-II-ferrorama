@@ -1,6 +1,6 @@
 function validarFormulario() {
     const nome = document.getElementById('nome').value.trim();
-    const cpf = document.getElementById('cpf').value.trim();
+    const cpf = document.getElementById("cpf").value.trim();
     const idade = parseInt(document.getElementById('idade').value,10);
     const experiencia = parseInt(document.getElementById('experiencia').value,10);
 
