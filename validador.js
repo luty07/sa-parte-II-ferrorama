@@ -13,7 +13,7 @@ function validarFormulario() {
         alert('por favor, preencha o seu nome');
         return;
     }
-    if (!cpf || cpf.length !== 11 || isNaN(cpf)) {
+    if (!cpf || cpf.length == 0 || isNaN(cpf)) {
         alert('por favor, insira um CPF valido');
         return
     }

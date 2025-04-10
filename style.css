@@ -1,0 +1,13 @@
+body{
+    border: 150;
+    margin: 50;
+    padding: 10;
+    background-color: #647795;
+    align-content: center;
+    
+}
+.capa{
+    margin: 150px;
+    border: 50px;
+    padding: 10px
+}
