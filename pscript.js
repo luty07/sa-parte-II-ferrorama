@@ -24,3 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     }
 });
+ function welcome (){
+    redirectTo ("ptela6.html")
+ }
