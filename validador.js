@@ -1,4 +1,4 @@
-function validarFormulario() {
+functio validarFormulario() {
     const nome = document.getElementById('nome').value.trim();
     const cpf = document.getElementById("cpf").value.trim();
     const idade = parseInt(document.getElementById('idade').value,10);
@@ -26,4 +26,3 @@ function validarFormulario() {
         return
     }
 }
-validarFormulario()
