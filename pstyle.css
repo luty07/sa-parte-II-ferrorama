@@ -41,29 +41,6 @@ button:hover {
     background-color: #ddd;
 }
 
-.progress-bar {
-    width: 80%;
-    height: 10px;
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    margin-top: 20px;
-}
-
-.progress {
-    width: 0%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    animation: load 3s linear forwards;
-}
-
-@keyframes load {
-    to {
-        width: 100%;
-    }
-}
 #ft {
     width: 250px;
 }
