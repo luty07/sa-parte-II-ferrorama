@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     background-color: #7D91B2;
     color: white;
@@ -15,14 +15,6 @@ body {
     height: 100vh;
     padding: 20px;
 }
-<<<<<<< HEAD
-.rota{
-    width: 220px;
-}
-
-.manutencao{
-    width: 220px;
-=======
 
 h1 {
     margin-bottom: 20px;
@@ -74,5 +66,37 @@ button:hover {
 }
 #ft {
     width: 250px;
->>>>>>> 6baeca709e538575eeee67ecca4d330feabd87eb
 }
+
+  .containerd {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .menu-item {
+    background-color: #ffffff20;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .menu-item p {
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    font-weight: bold;
+  }
+  
+  
