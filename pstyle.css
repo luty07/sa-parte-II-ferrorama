@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     background-color: #7D91B2;
     color: white;
@@ -15,20 +15,9 @@ body {
     height: 100vh;
     padding: 20px;
 }
-.rota{
-    width: 220px;
-}
-
-.manutencao{
-    width: 220px;
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b74991941adc0a5e4cd7f905ceb4b7bc0c9a0af
 
 h1 {
     margin-bottom: 20px;
-}
 }
 
 input {
@@ -52,29 +41,39 @@ button:hover {
     background-color: #ddd;
 }
 
-.progress-bar {
-    width: 80%;
-    height: 10px;
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    margin-top: 20px;
-}
-
-.progress {
-    width: 0%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    animation: load 3s linear forwards;
-}
-
-@keyframes load {
-    to {
-        width: 100%;
-    }
-}
 #ft {
     width: 250px;
 }
+
+  .containerd {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .menu-item {
+    background-color: #ffffff20;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .menu-item p {
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    font-weight: bold;
+  }
+  
+  

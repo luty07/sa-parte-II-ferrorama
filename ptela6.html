@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carregando</title>
-    <link rel="stylesheet" href="style.css">
+    <title>RAILTRACK</title>
+    <link rel="stylesheet" href="pstyle.css">
 </head>
 <body>
-    <div class="container">
-        <h1>RAILTRACK</h1>
-        <img id="ft" src="trema.png" alt="">
-        <p>PREPARANDO SUA JORNADA FERROVIÁRIA...</p>
-        <div class="progress-bar">
-            <div class="progress"></div>
-    <script src="pscript.js"></script>
+  <div class="containerd">
+    <h1>INÍCIO</h1>
+<hr>
+  <br>
+    <div class="menu-item" onclick="abrirPagina('destinos.html')">
+    <a href="braian.html"><img src="treminicio.jpg" alt="Destinos e Horários"></a>
+      <p>DESTINOS E HORÁRIOS</p>
+      
+    </div>
+
+    <div class="menu-item" onclick="abrirPagina('manutencao.html')">
+      <a href="helena.html"><img src="manutencao.jpg" alt="Manutenção"></a>
+      <p>MANUTENÇÃO</p>
+    </div>
+
+    <div class="menu-item" onclick="abrirPagina('relatorios.html')">
+      <img src="rea.jpg" alt="Relatórios e Análises">
+      <p>RELATÓRIOS E ANÁLISES</p>
+    </div>
+
+    <div class="menu-item" onclick="abrirPagina('alertas.html')">
+        <a href=""><img src="aen.jpg" alt="Alertas e Notificações"></a>
+      <p>ALERTAS E NOTIFICAÇÕES</p>
+    </div>
+  </div>
+
+  <script src="pscript.js"></script>
 </body>
 </html>

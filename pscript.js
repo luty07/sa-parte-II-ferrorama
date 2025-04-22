@@ -27,3 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
  function welcome (){
     redirectTo ("ptela6.html")
  }
+ function irparaPag(pagina) {
+    window.location.href = pagina;
+  }
+  
