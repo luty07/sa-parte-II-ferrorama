@@ -20,14 +20,13 @@ function recuperarSenha() {
 document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector(".progress")) {
         setTimeout(() => {
-            window.location.href = "pinicio.html"; 
+            window.location.href = "pinicio.html";
         }, 3000);
     }
 });
- function welcome (){
-    redirectTo ("ptela6.html")
- }
- function irparaPag(pagina) {
+function welcome() {
+    redirectTo("inicio.html")
+}
+function irparaPag(pagina) {
     window.location.href = pagina;
-  }
-  
+}

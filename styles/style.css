@@ -15,11 +15,12 @@ body {
     height: 100vh;
     padding: 20px;
 }
-.rota{
+
+.rota {
     width: 220px;
 }
 
-.manutencao{
+.manutencao {
     width: 220px;
 }
 
@@ -71,6 +72,7 @@ button:hover {
         width: 100%;
     }
 }
+
 #ft {
     width: 250px;
 }

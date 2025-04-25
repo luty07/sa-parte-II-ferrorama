@@ -1,79 +1,77 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    background-color: #7D91B2;
-    color: white;
-    margin: 0;
-    padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #7D91B2;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
 }
 
 h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 input {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
 }
 
 button {
-    background-color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 button:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 #ft {
-    width: 250px;
+  width: 250px;
 }
 
-  .containerd {
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-  }
+.containerd {
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
 
-  .menu-item {
-    background-color: #ffffff20;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .menu-item:hover {
-    transform: scale(1.03);
-  }
-  
-  .menu-item img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-  }
-  
-  .menu-item p {
-    margin: 0;
-    padding: 10px;
-    background-color: rgba(0,0,0,0.5);
-    font-weight: bold;
-  }
-  
-  
+.menu-item {
+  background-color: #ffffff20;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.menu-item p {
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
