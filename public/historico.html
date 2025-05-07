@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAILTRACK</title>
+  <meta charset="UTF-8">
+  <title>RAILTRACK</title>
+  <link rel="stylesheet" href="../styles/pstyle.css">
 </head>
 <body>
-    
+
+  <h2>HISTÓRICO DE ROTAS</h2>
+<hr>
+<br>
+  <div class="botoes-rotas">
+    <button class="botao-rota" data-rota="Setor 1 ➤ Setor 3">Setor 1 ➤ Setor 3</button>
+    <button class="botao-rota" data-rota="Setor 2 ➤ Setor 5">Setor 2 ➤ Setor 5</button>
+    <button class="botao-rota" data-rota="Setor 4 ➤ Setor 2">Setor 4 ➤ Setor 2</button>
+    <button class="botao-rota" data-rota="Setor 5 ➤ Setor 1">Setor 5 ➤ Setor 1</button>
+  </div>
+
+  <div class="lista-container">
+    <h3>Mais Recentes</h3>
+    <hr id="recacess">
+    <ul id="lista-recentes"></ul>
+  </div>
+
+  <div class="lista-container">
+    <h3>Mais Acessadas</h3>
+    <hr id="recacess">
+    <ul id="lista-acessadas"></ul>
+  </div>
+  <hr>
+  <br>
+  <a href="inicio.html"><button>Voltar ao início</button></a>
+  <script src="../scripts/pscript.js"></script>
 </body>
 </html>
