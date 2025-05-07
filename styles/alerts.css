@@ -1,33 +1,40 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #d4dce8;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+}
+
+.app-container {
   max-width: 400px;
   margin: auto;
-  background-color: #3c5a7c;
   height: 100vh;
+  background-color: #4b6b8a;
   display: flex;
   flex-direction: column;
   color: white;
-  border: 1px solid #999;
+  border: 1px solid #ccc;
+  position: relative;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
 
-header h1 {
+.header h1 {
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.3rem;
 }
 
-header button {
+.header button {
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -35,49 +42,53 @@ header button {
   cursor: pointer;
 }
 
-#updatedMessage {
-  background-color: #ccc;
+.updated {
+  display: none;
+  background-color: #d3d3d3;
   color: black;
+  font-weight: bold;
   text-align: center;
   padding: 10px;
-  font-weight: bold;
-  display: none;
+  font-size: 1.2rem;
 }
 
-main {
+.alerts-list {
   flex: 1;
   overflow-y: auto;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
-.alert-box {
+.alert-item {
   background-color: white;
   color: black;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 12px;
   position: relative;
   display: flex;
   align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-.alert-box::before,
-.alert-box::after {
+.alert-item::before,
+.alert-item::after {
   content: '';
-  width: 10px;
-  height: 20px;
-  background: #3c5a7c;
   position: absolute;
+  width: 12px;
+  height: 25px;
+  background-color: #4b6b8a;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.alert-box::before {
-  left: 0;
+.alert-item::before {
+  left: -6px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-.alert-box::after {
-  right: 0;
+.alert-item::after {
+  right: -6px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -86,7 +97,7 @@ main {
   width: 10px;
   height: 100%;
   background: repeating-linear-gradient(to bottom, black 0, black 10px, transparent 10px, transparent 20px);
-  margin: 0 10px;
+  margin-right: 12px;
   position: relative;
 }
 
@@ -98,22 +109,24 @@ main {
   border: 2px solid black;
   border-radius: 50%;
   position: absolute;
+  left: 50%;
   top: 10px;
-  left: 0;
-  transform: translateX(-50%);
+  transform: translate(-50%);
 }
 
-footer {
+.footer {
   text-align: center;
   padding: 10px;
+  background-color: #4b6b8a;
 }
 
-footer button {
-  padding: 8px 16px;
+.footer button {
   background-color: white;
-  border: none;
   color: black;
+  border: 1px solid black;
+  padding: 8px 20px;
   font-weight: bold;
-  cursor: pointer;
+  text-transform: uppercase;
   border-radius: 5px;
+  cursor: pointer;
 }

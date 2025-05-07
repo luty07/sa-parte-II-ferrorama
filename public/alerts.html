@@ -7,23 +7,22 @@
   <link rel="stylesheet" href="alerts.css">
 </head>
 <body>
-  <div class="container">
-    <header>
+  <div class="app-container">
+    <header class="header">
       <h1>ALERTAS E<br>NOTIFICAÇÕES <span>🔔</span></h1>
       <button id="refreshBtn">🔄</button>
     </header>
 
-    <div id="updatedMessage" class="hidden">ATUALIZADO!</div>
+    <div id="updatedMessage" class="updated">ATUALIZADO!</div>
 
-    <main id="alertsList">
-      <!-- Itens inseridos via JavaScript -->
+    <main id="alertsList" class="alerts-list">
+      <!-- Conteúdo será injetado via JavaScript -->
     </main>
 
-    <footer>
+    <footer class="footer">
       <button onclick="voltarInicio()">VOLTAR AO INÍCIO</button>
     </footer>
   </div>
-
   <script src="alerts.js"></script>
 </body>
 </html>
