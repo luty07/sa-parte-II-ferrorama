@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alertas e Notificações</title>
-  <link rel="stylesheet" href="alerts.css" />
+  <link rel="stylesheet" href="alerts.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="title">
-        <h1>ALERTAS E<br>NOTIFICAÇÕES <span class="icon">🔔</span></h1>
-      </div>
-      <button class="refresh-btn" onclick="atualizarNotificacoes()">🔄</button>
+      <h1>ALERTAS E<br>NOTIFICAÇÕES <span>🔔</span></h1>
+      <button id="refreshBtn">🔄</button>
     </header>
 
-    <main id="notificacoes">
-      <!-- Cards de notificação serão inseridos via JS -->
+    <div id="updatedMessage" class="hidden">ATUALIZADO!</div>
+
+    <main id="alertsList">
+      <!-- Itens inseridos via JavaScript -->
     </main>
 
     <footer>
