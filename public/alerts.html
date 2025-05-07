@@ -1,28 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alertas e Notificações</title>
-  <link rel="stylesheet" href="alerts.css">
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <div class="app-container">
-    <header class="header">
-      <h1>ALERTAS E<br>NOTIFICAÇÕES <span>🔔</span></h1>
-      <button id="refreshBtn">🔄</button>
-    </header>
+  <div class="phone-frame">
+    <div class="app-container">
+      <header class="header">
+        <h1>ALERTAS E<br>NOTIFICAÇÕES <span>🔔</span></h1>
+        <button id="refreshBtn">🔄</button>
+      </header>
 
-    <div id="updatedMessage" class="updated">ATUALIZADO!</div>
+      <div id="updatedMessage" class="updated">ATUALIZADO!</div>
 
-    <main id="alertsList" class="alerts-list">
-      <!-- Conteúdo será injetado via JavaScript -->
-    </main>
+      <main id="alertsList" class="alerts-list">
+        <!-- Itens são adicionados via JS -->
+      </main>
 
-    <footer class="footer">
-      <button onclick="voltarInicio()">VOLTAR AO INÍCIO</button>
-    </footer>
+      <footer class="footer">
+        <button onclick="voltarInicio()">VOLTAR AO INÍCIO</button>
+      </footer>
+    </div>
   </div>
-  <script src="alerts.js"></script>
+
+  <script src="../scripts/alerts.js"></script>
 </body>
 </html>

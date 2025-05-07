@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +5,31 @@
 }
 
 body {
+  background-color: #d0d0d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #e0e0e0;
+}
+
+.phone-frame {
+  width: 375px;
+  height: 812px;
+  background-color: #ffffff;
+  border: 16px solid #ccc;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+  position: relative;
 }
 
 .app-container {
-  max-width: 400px;
-  margin: auto;
-  height: 100vh;
-  background-color: #4b6b8a;
+  width: 100%;
+  height: 100%;
+  background-color: #5e7696;
   display: flex;
   flex-direction: column;
-  color: white;
-  border: 1px solid #ccc;
-  position: relative;
 }
 
 .header {
@@ -27,29 +37,29 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  color: white;
 }
 
 .header h1 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.3rem;
 }
 
 .header button {
-  font-size: 1.5rem;
   background: none;
   border: none;
+  font-size: 1.5rem;
   color: white;
   cursor: pointer;
 }
 
 .updated {
   display: none;
-  background-color: #d3d3d3;
-  color: black;
-  font-weight: bold;
   text-align: center;
+  background-color: #dcdcdc;
+  color: black;
   padding: 10px;
-  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .alerts-list {
@@ -67,36 +77,39 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .alert-item::before,
 .alert-item::after {
   content: '';
   position: absolute;
-  width: 12px;
-  height: 25px;
-  background-color: #4b6b8a;
+  width: 10px;
+  height: 24px;
+  background-color: #5e7696;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .alert-item::before {
-  left: -6px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  left: -5px;
+  border-radius: 10px 0 0 10px;
 }
 
 .alert-item::after {
-  right: -6px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  right: -5px;
+  border-radius: 0 10px 10px 0;
 }
 
 .timeline {
   width: 10px;
   height: 100%;
-  background: repeating-linear-gradient(to bottom, black 0, black 10px, transparent 10px, transparent 20px);
+  background: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 8px,
+    transparent 8px,
+    transparent 16px
+  );
   margin-right: 12px;
   position: relative;
 }
@@ -109,15 +122,14 @@ body {
   border: 2px solid black;
   border-radius: 50%;
   position: absolute;
-  left: 50%;
   top: 10px;
-  transform: translate(-50%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer {
-  text-align: center;
   padding: 10px;
-  background-color: #4b6b8a;
+  text-align: center;
 }
 
 .footer button {

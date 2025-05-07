@@ -23,7 +23,7 @@ function renderAlertas() {
 }
 
 function voltarInicio() {
-  alert("Voltando ao início...");
+  window.location.href = "index.html"; // Ajuste se necessário
 }
 
 document.getElementById("refreshBtn").addEventListener("click", () => {
