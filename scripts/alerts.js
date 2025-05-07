@@ -6,20 +6,24 @@ const alertas = [
   "Relatório do dia 28/03 disponível na aba Relatório e análises."
 ];
 
-function carregarAlertas() {
-  const listEl = document.getElementById("alertsList");
-  listEl.innerHTML = "";
+function renderAlertas() {
+  const container = document.getElementById("alertsList");
+  container.innerHTML = "";
+
   alertas.forEach(texto => {
-    const box = document.createElement("div");
-    box.className = "alert-box";
-    box.innerHTML = `<div class="timeline"></div><div>${texto}</div>`;
-    listEl.appendChild(box);
+    const item = document.createElement("div");
+    item.className = "alert-item";
+
+    item.innerHTML = `
+      <div class="timeline"></div>
+      <div class="alert-text">${texto}</div>
+    `;
+    container.appendChild(item);
   });
 }
 
 function voltarInicio() {
-  alert("Voltando ao início...");
-  // Aqui você pode redirecionar se quiser: window.location.href = 'index.html';
+  window.location.href = "index.html"; // Ajuste se necessário
 }
 
 document.getElementById("refreshBtn").addEventListener("click", () => {
@@ -27,8 +31,8 @@ document.getElementById("refreshBtn").addEventListener("click", () => {
   msg.style.display = "block";
   setTimeout(() => {
     msg.style.display = "none";
-  }, 1500);
-  carregarAlertas();
+  }, 2000);
+  renderAlertas();
 });
 
-carregarAlertas();
+renderAlertas();
