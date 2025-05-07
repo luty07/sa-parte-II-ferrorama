@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alertas e Notificações</title>
+  <link rel="stylesheet" href="alerts.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title">
+        <h1>ALERTAS E<br>NOTIFICAÇÕES <span class="icon">🔔</span></h1>
+      </div>
+      <button class="refresh-btn" onclick="atualizarNotificacoes()">🔄</button>
+    </header>
+
+    <main id="notificacoes">
+      <!-- Cards de notificação serão inseridos via JS -->
+    </main>
+
+    <footer>
+      <button onclick="voltarInicio()">VOLTAR AO INÍCIO</button>
+    </footer>
+  </div>
+
+  <script src="alerts.js"></script>
+</body>
+</html>
