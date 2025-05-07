@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alertas e Notificações</title>
+  <link rel="stylesheet" href="alerts.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ALERTAS E<br>NOTIFICAÇÕES <span>🔔</span></h1>
+      <button id="refreshBtn">🔄</button>
+    </header>
+
+    <div id="updatedMessage" class="hidden">ATUALIZADO!</div>
+
+    <main id="alertsList">
+      <!-- Itens inseridos via JavaScript -->
+    </main>
+
+    <footer>
+      <button onclick="voltarInicio()">VOLTAR AO INÍCIO</button>
+    </footer>
+  </div>
+
+  <script src="alerts.js"></script>
+</body>
+</html>
