@@ -122,3 +122,7 @@ li {
 li:hover {
   background: #ffffff40;
 }
+
+#historicorotas {
+  width: 400px;
+}
