@@ -7,6 +7,9 @@ body {
   padding: 0;
 }
 
+hr {
+  width: 400px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -35,6 +38,10 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+#recacess {
+  width: 180px;
 }
 
 button:hover {
@@ -74,4 +81,48 @@ button:hover {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
+}
+
+.botoes-rotas {
+  margin-bottom: 30px;
+}
+
+.botao-rota {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botao-rota:hover {
+  background-color: #0056b3;
+}
+
+.lista-container {
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background: #ffffff20;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+li:hover {
+  background: #ffffff40;
+}
+
+#historicorotas {
+  width: 400px;
 }
