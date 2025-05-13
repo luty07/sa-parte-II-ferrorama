@@ -119,10 +119,6 @@ li {
   color: white;
 }
 
-li:hover {
-  background: #ffffff40;
-}
-
 #historicrotas {
   width: 400px;
 }
