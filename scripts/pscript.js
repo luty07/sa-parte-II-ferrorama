@@ -57,8 +57,8 @@ function validarFormulario() {
   console.log(usuario);
 
   if (!usuario) {
-      alert('por favor, preencha o seu email');
-      return;
+    alert('por favor, preencha o seu email');
+    return;
   }
 }
 function validarFormulario()

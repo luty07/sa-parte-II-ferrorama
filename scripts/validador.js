@@ -35,5 +35,4 @@ function validarFormulario() {
         alert('por favor, preencha o seu email');
         return;
     }
-}
 function validarFormulario()
