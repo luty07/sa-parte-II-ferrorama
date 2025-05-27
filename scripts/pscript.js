@@ -50,3 +50,15 @@ botoes.forEach(botao => {
 });
 
 atualizarListas();
+
+function validarFormulario() {
+  const nome = document.getElementById('usuario').value.trim();
+
+  console.log(usuario);
+
+  if (!usuario) {
+      alert('por favor, preencha o seu email');
+      return;
+  }
+}
+function validarFormulario()
