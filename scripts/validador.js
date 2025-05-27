@@ -26,7 +26,7 @@ function validarFormulario() {
         return
     }
 }
-function validarFormulario() {
+
     const nome = document.getElementById('usuario').value.trim();
 
     console.log(usuario);
