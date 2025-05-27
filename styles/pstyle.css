@@ -123,3 +123,11 @@ li {
 #historicrotas {
   width: 400px;
 }
+.rota{
+ margin: 10px;
+  width: 200px;
+  background-color: black;
+  color: white;
+justify-self: center;
+border-radius: 50px;
+}
