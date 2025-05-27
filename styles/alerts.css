@@ -19,7 +19,7 @@ body {
   background-color: #ffffff;
   border: 16px solid #ccc;
   border-radius: 40px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
 }
@@ -103,13 +103,11 @@ body {
 .timeline {
   width: 10px;
   height: 100%;
-  background: repeating-linear-gradient(
-    to bottom,
-    black 0px,
-    black 8px,
-    transparent 8px,
-    transparent 16px
-  );
+  background: repeating-linear-gradient(to bottom,
+      black 0px,
+      black 8px,
+      transparent 8px,
+      transparent 16px);
   margin-right: 12px;
   position: relative;
 }
