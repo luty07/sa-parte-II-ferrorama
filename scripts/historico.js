@@ -2,6 +2,7 @@ const botoes = document.querySelectorAll('.botao-rota');
 const listaRecentes = document.getElementById('lista-recentes');
 const listaAcessadas = document.getElementById('lista-acessadas');
 
+
 let historico = JSON.parse(localStorage.getItem('historicoRotas')) || [];
 
 function atualizarListas() {
@@ -23,6 +24,7 @@ function atualizarListas() {
     listaAcessadas.appendChild(li);
   }
 }
+atualizarListas();
 
 function acessarRota(nome) {
   let achou = false;
@@ -49,16 +51,5 @@ botoes.forEach(botao => {
   });
 });
 
-atualizarListas();
 
-function validarFormulario() {
-  const nome = document.getElementById('usuario').value.trim();
 
-  console.log(usuario);
-
-  if (!usuario) {
-    alert('por favor, preencha o seu email');
-    return;
-  }
-}
-function validarFormulario()
