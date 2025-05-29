@@ -11,7 +11,7 @@ body {
   box-sizing: border-box;
 }
 
-section {
+#alertas {
   background: rgb(255, 255, 255);
   margin: 20px auto;
   padding: 20px;
@@ -32,17 +32,12 @@ section {
 }
 
 .headerr {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  color: white;
-  text-align: center;
-  
+display: flex;
+color: white;
 }
 
 hr {
-  width: 350px;
+  width: 390px;
 }
 
 h1 {
@@ -58,6 +53,24 @@ h1 {
   cursor: pointer;
 }
 
+button {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .refreshBtn {
+  display: flex;
+}
+.linha {
+  display: flex;
+}
+
+section {
+  background-color: #5e7696;
+  margin: 50px auto;
   display: flex;
 }
