@@ -81,3 +81,7 @@ body {
     align-items: center;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2);
   }
+
+  .h1 {
+    background: rgb(0, 0, 0);
+  }
