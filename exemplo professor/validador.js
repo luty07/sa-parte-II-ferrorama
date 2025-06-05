@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const formulario = document.getElementById("formulario");
+    const formulario = document.getElementById("meuFormulario");
 
     formulario.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -7,17 +7,22 @@ document.addEventListener("DOMContentLoaded", function () {
         let valido = true;
 
         // para limpar os erros
+        document.getElementById("erroNome").textContent = "";
         document.getElementById("erroEmail").textContent = "";
         document.getElementById("erroSenha").textContent = "";
 
-
+        const nome = document.getElementById("nome").value.trim();
         const email = document.getElementById("email").value.trim();
         const senha = document.getElementById("senha").value.trim();
 
-
+        console.log(nome);
         console.log(email);
         console.log(senha);
 
+        if (nome.length < 3) {
+            document.getElementById("erroNome").textContent = "O nome deve ter pelo menos 3 caracteres";
+            valido = false;
+        }
 
         if (senha.length < 6) {
             document.getElementById("erroSenha").textContent = "O senha deve ter pelo menos 6 caracteres";
@@ -34,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (valido) {
             alert("Formulário enviado com sucesso!");
             formulario.reset();
-            window.location.href = "public/inicio.html";
+            window.location.href = "menu.html";
         }
 
 

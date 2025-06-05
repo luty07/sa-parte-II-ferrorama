@@ -32,8 +32,8 @@ body {
 }
 
 #headerr {
-display: flex;
-color: white;
+  display: flex;
+  color: white;
 }
 
 hr {
@@ -65,6 +65,7 @@ button {
 .refreshBtn {
   display: flex;
 }
+
 .linha {
   display: flex;
 }
