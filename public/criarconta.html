@@ -6,14 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAILTRACK</title>
     <link rel="stylesheet" href="../styles/pstyle.css">
+    <script src="../scripts/criarconta.js"></script>
 </head>
 
 <body>
     <div class="container">
         <h1>Criar Conta</h1>
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Senha">
-        <a href="boasvindas.html"><button>Cadastrar</button></a>
+        <form id="formulario">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div class="error" id="erroEmail"></div>
+        
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+            <div class="error" id="erroSenha"></div>
+        
+            <button>Cadastrar</button>
+        
+        </form>
         <a href="../index.html">Voltar</a>
     </div>
 
