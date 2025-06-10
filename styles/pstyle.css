@@ -141,3 +141,12 @@ section {
   color: black;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2);
 }
+
+#manut {
+  background-color: rgba(0, 0, 0, 0.192);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}

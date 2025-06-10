@@ -103,3 +103,7 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
+
+hr {
+  width: 385px;
+}
