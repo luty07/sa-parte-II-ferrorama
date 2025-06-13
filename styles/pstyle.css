@@ -10,6 +10,16 @@ body {
 hr {
   width: 400px;
 }
+ #cabecalho{
+   color: rgb(0, 0, 0);
+   background: white;
+   font-size: 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   position: absolute;
+   top: -25px;
+  left: 10px;	
+  border-radius: 10px;								
+ }
 
 .container {
   display: flex;
@@ -22,6 +32,11 @@ hr {
 
 h1 {
   margin-bottom: 20px;
+}
+
+.teste {
+    display: flex
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
 }
 
 input {
