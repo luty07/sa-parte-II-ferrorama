@@ -132,3 +132,7 @@ h1 {
 hr {
     width: 385px;
 }
+
+#botao_inicio {
+    width: 50%;
+}
