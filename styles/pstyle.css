@@ -139,15 +139,29 @@ li {
   width: 400px;
 }
 
-.rota {
-  margin: 10px;
-  width: 200px;
-  background-color: black;
-  color: white;
-  justify-self: center;
-  border-radius: 50px;
-}
 .error {
   color: rgb(182, 7, 7);
   font-size: 0.9em;
+}
+
+section {
+  background: rgb(255, 255, 255);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 350px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2);
+}
+
+#manut {
+  background-color: rgba(0, 0, 0, 0.192);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
