@@ -10,6 +10,7 @@ body {
 hr {
   width: 400px;
 }
+
  #cabecalho{
    color: rgb(0, 0, 0);
    background: white;
@@ -43,11 +44,6 @@ hr {
 
 h1 {
   margin-bottom: 20px;
-}
-
-.teste {
-    display: flex
-    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
 }
 
 input {
