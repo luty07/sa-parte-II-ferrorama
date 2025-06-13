@@ -62,7 +62,7 @@ button {
   background-color: white;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 40px;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -115,6 +115,7 @@ button:hover {
 }
 
 .botao-rota {
+  font-size: large;
   margin: 5px;
   padding: 10px 15px;
   border: none;
@@ -122,14 +123,17 @@ button:hover {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 40px;
 }
 
 .botao-rota:hover {
   background-color: #0056b3;
+
 }
 
 .lista-container {
   margin-bottom: 30px;
+  font-size: large;
 }
 
 ul {
