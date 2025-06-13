@@ -6,4 +6,4 @@ Em seguida, o projeto passou para a fase de codificação. A primeira interface 
 O projeto também exigiu análises individuais dos participantes. Cada aluno elaborou um relatório crítico apontando melhorias no design e no código-fonte, observando aspectos como organização visual, clareza das informações, boas práticas de programação e usabilidade. Outro relatório individual foi feito com base nas atividades práticas em sala de aula, reforçando a importância de revisar e refinar continuamente o desenvolvimento de um sistema.
 Por fim, foi solicitado o envio do repositório oficial do grupo, reunindo todo o trabalho realizado. O RailTrack representa um exercício completo de design, desenvolvimento web e análise crítica, promovendo a integração de conhecimentos técnicos e práticos aplicados a um contexto real de tecnologia para mobilidade urbana.
 
-Alunos: Pérola Vieira, Helena Martins, Braian Escher e Heloysa Sales. EMDS/M2 - 2023
+Alunos: Pérola Vieira, Helena Martins, Braian Escher e Heloysa Sales. EMDS/23 - M2
