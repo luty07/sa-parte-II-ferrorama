@@ -28,3 +28,11 @@ if(strlen($senha)<6){
     $erroSenha+"A senha deve ter pelo menos 6 caracteres.";
     $valido:false;
 }
+
+  if ($valido) {
+        
+        $stmt = $mysqli->prepare("SELECT id, senha FROM usuarios WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+  }
