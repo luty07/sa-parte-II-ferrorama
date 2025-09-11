@@ -1,45 +1,43 @@
 <?php
-$host="localhost";
-$user="root";
-$password="root";
-$db ="Nome do banco de dados"; //Não tem banco de dados e nem o db
-$mysqli=new mysqli($host, $user, $password, $db);
+$host = "localhost";
+$user = "root";
+$password = "root";
+$db = "login_system"; //banco criado.
+$mysqli = new mysqli($host, $user, $password, $db);
 
-if($mysqli>connect_error) {
-    die("Falha na conexão:".$mysqli->connect_error);
+if($mysqli->connect_error) {
+    die("Falha na conexão: " . $mysqli->connect_error);
 }
 
-$errorEmail="";
-$erroSenha="";
+$erroEmail = "";
+$erroSenha = "";
+$valido = true;
 
-if($_SERVER["REQUEST_METHOD"]=="POST"){
+if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $email=trim($_POST["email"]);
-    $senha=trim($_POST["senha"]);
-}
+    $email = trim($_POST["email"]);
+    $senha = trim($_POST["senha"]);
 
-if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    $erroEmail="E-mail inválido.";
-    $valido=false;
-}
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $erroEmail = "E-mail inválido.";
+        $valido = false;
+    }
 
-if(strlen($senha)<6){
-    $erroSenha+"A senha deve ter pelo menos 6 caracteres.";
-    $valido:false;
-}
+    if(strlen($senha) < 6){
+        $erroSenha = "A senha deve ter pelo menos 6 caracteres.";
+        $valido = false;
+    }
 
-  if ($valido) {
-        
+    if($valido){
         $stmt = $mysqli->prepare("SELECT id, senha FROM usuarios WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $resultado = $stmt->get_result();
-  }
 
- if ($resultado->num_rows === 1) {
+        if($resultado->num_rows === 1){
             $usuario = $resultado->fetch_assoc();
 
-            if ($senha === $usuario['senha']) {
+            if(password_verify($senha, $usuario['senha'])){
                 session_start();
                 $_SESSION['usuario_id'] = $usuario['id'];
                 header("Location: public/inicio.html");
@@ -50,6 +48,8 @@ if(strlen($senha)<6){
         } else {
             $erroEmail = "Usuário não encontrado.";
         }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -75,4 +75,3 @@ if(strlen($senha)<6){
     </form>
 </body>
 </html>
-
