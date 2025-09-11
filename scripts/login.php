@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 }
 
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    $erroEmail="E-mai inválido.";
+    $erroEmail="E-mail inválido.";
     $valido=false;
 }
 
