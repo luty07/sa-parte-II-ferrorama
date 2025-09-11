@@ -2,8 +2,7 @@
 $host="localhost";
 $user="root";
 $password="root";
-$db ="Nome do banco de dados";
-
+$db ="Nome do banco de dados"; //Não tem banco de dados e nem o db
 $mysqli=new mysqli($host, $user, $password, $db);
 
 if($mysqli>connect_error) {
