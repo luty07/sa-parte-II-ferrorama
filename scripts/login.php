@@ -36,3 +36,44 @@ if(strlen($senha)<6){
         $stmt->execute();
         $resultado = $stmt->get_result();
   }
+
+ if ($resultado->num_rows === 1) {
+            $usuario = $resultado->fetch_assoc();
+
+            if ($senha === $usuario['senha']) {
+                session_start();
+                $_SESSION['usuario_id'] = $usuario['id'];
+                header("Location: public/inicio.html");
+                exit;
+            } else {
+                $erroSenha = "Senha incorreta.";
+            }
+        } else {
+            $erroEmail = "Usuário não encontrado.";
+        }
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        .erro { color: red; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <form method="POST" action="">
+        <label>Email:</label><br>
+        <input type="text" name="email" value="<?= isset($email) ? htmlspecialchars($email) : '' ?>"><br>
+        <span class="erro"><?= $erroEmail ?></span><br>
+
+        <label>Senha:</label><br>
+        <input type="password" name="senha"><br>
+        <span class="erro"><?= $erroSenha ?></span><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+
