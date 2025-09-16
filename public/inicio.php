@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+  
+    header("Location: ../login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -18,17 +26,15 @@
     <div class="menu-item">
       <a href="historico.html"><img src="../assets/historico.jpg" alt="Histórico"></a>
       <p>HISTÓRICO DE ROTAS</p>
-
     </div>
 
     <div class="menu-item">
       <a href="destinos.html"><img src="../assets/treminicio.jpg" alt="Destinos e Horários"></a>
       <p>DESTINOS E HORÁRIOS</p>
-
     </div>
 
     <div class="menu-item">
-      <a href="rotas.html"><img src="../assets/rotas.jpg" alt="Manutenção"></a>
+      <a href="rotas.html"><img src="../assets/rotas.jpg" alt="Rotas"></a>
       <p>ROTAS</p>
     </div>
 
@@ -49,5 +55,4 @@
   </div>
 
 </body>
-
 </html>
