@@ -1,7 +1,4 @@
 <?php
-session_start();
-
-// Conexão com o banco
 $host = "localhost";
 $user = "root";
 $password = "root";
@@ -15,12 +12,11 @@ if ($mysqli->connect_error) {
 
 $erroEmail = "";
 $erroSenha = "";
-$email = "";
+$valido = true;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"]);
     $senha = trim($_POST["senha"]);
-    $valido = true;
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $erroEmail = "E-mail inválido.";
@@ -42,8 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $usuario = $resultado->fetch_assoc();
 
             if (password_verify($senha, $usuario['senha'])) {
+                session_start();
                 $_SESSION['usuario_id'] = $usuario['id'];
-                header("Location: public/inicio.php"); // ajuste o caminho se necessário
+                header("Location: public/inicio.html");
                 exit;
             } else {
                 $erroSenha = "Senha incorreta.";
@@ -59,20 +56,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .erro {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-    <h2>Login</h2>
     <form method="POST" action="">
         <label>Email:</label><br>
-        <input type="text" name="email" value="<?= htmlspecialchars($email) ?>"><br>
+        <input type="text" name="email" value="<?= isset($email) ? htmlspecialchars($email) : '' ?>"><br>
         <span class="erro"><?= $erroEmail ?></span><br>
 
         <label>Senha:</label><br>
         <input type="password" name="senha"><br>
         <span class="erro"><?= $erroSenha ?></span><br><br>
 
-        <button type="submit">Entrar</button>
+        <button type="submit">Login</button>
     </form>
 </body>
 </html>
