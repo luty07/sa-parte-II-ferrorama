@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-
+// Conexão com o banco
 $host = "localhost";
 $user = "root";
 $password = "root";
@@ -43,9 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if (password_verify($senha, $usuario['senha'])) {
                 $_SESSION['usuario_id'] = $usuario['id'];
-                
-                
-                header("Location: public/inicio.php"); 
+                header("Location: public/inicio.php"); // ajuste o caminho se necessário
                 exit;
             } else {
                 $erroSenha = "Senha incorreta.";
