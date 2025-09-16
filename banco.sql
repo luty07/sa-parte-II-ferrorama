@@ -1,4 +1,4 @@
-CREATE DATABASE login_system;
+
 
 USE login_system;
 
