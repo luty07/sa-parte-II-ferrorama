@@ -43,9 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $usuario = $resultado->fetch_assoc();
 
             if(password_verify($senha, $usuario['senha'])) {
+    session_start();
     $_SESSION['usuario_id'] = $usuario['id'];
-    header("Location: public/inicio.php");
+    header("Location: public/inicio.php"); 
     exit;
+}
+
 }
 
                 exit;
