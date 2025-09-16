@@ -4,6 +4,7 @@ $user = "root";
 $password = "root";
 $db = "login_system";
 
+
 $mysqli = new mysqli($host, $user, $password, $db);
 
 if ($mysqli->connect_error) {
@@ -56,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel ="stylesheet" href="../styles/pstyle.css">
     <style>
         .erro {
             color: red;
