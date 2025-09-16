@@ -42,12 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($resultado->num_rows === 1) {
             $usuario = $resultado->fetch_assoc();
 
-            if (password_verify($senha, $usuario['senha'])) {
-                $_SESSION['usuario_id'] = $usuario['id'];
-                   echo "<script>
-                        alert('Você estrou com sucesso!');
-                        window.location.href = 'public/inicio.html';
-                      </script>";
+            if(password_verify($senha, $usuario['senha'])) {
+    $_SESSION['usuario_id'] = $usuario['id'];
+    header("Location: public/inicio.php");
+    exit;
+}
+
                 exit;
             } else {
                 $erroSenha = "Senha incorreta.";
