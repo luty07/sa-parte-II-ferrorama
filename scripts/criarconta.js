@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!emailRegex.test(email)) {
             document.getElementById("erroEmail").textContent = "E-mail Inválido.";
-            valido = false;
+            valido = false; 
         }
 
         if (valido) {
