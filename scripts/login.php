@@ -42,21 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($resultado->num_rows === 1) {
             $usuario = $resultado->fetch_assoc();
 
-            if(password_verify($senha, $usuario['senha'])) {
-    session_start();
-    $_SESSION['usuario_id'] = $usuario['id'];
-    header("Location: inicio.php"); 
-    exit;
-}
-
-}
-
-                exit;
-            } else {
-                $erroSenha = "Senha incorreta.";
-            }
+           if ($resultado->num_rows > 0) {
+            $_SESSION['usuario'] = $email;
+            header("Location: inicio.php"); // redireciona
+            exit();
         } else {
-            $erroEmail = "Usuário não encontrado.";
+            $erroSenha = "E-mail ou senha incorretos.";
         }
     }
 }
