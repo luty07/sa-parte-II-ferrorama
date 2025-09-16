@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['usuario_id'] = $usuario['id'];
                    echo "<script>
                         alert('Você estrou com sucesso!');
-                        window.location.href = 'public/inicio.php';
+                        window.location.href = 'public/inicio.html';
                       </script>";
                 exit;
             } else {
