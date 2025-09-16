@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (valido) {
             alert("Formulário enviado com sucesso!");
             formulario.reset();
-            window.location.href = "inicio.html";
+            window.location.href = "inicio.php";
         }
 
 
