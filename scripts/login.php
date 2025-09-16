@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $host = "localhost";
 $user = "root";
 $password = "root";
@@ -11,13 +13,15 @@ if ($mysqli->connect_error) {
     die("Falha na conexão: " . $mysqli->connect_error);
 }
 
-$erroEmail = "";
-$erroSenha = "";
+$erroEmail="";
+$erroSenha="";
+$email="";
 $valido = true;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"]);
     $senha = trim($_POST["senha"]);
+    $valido=true;
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $erroEmail = "E-mail inválido.";
@@ -39,9 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $usuario = $resultado->fetch_assoc();
 
             if (password_verify($senha, $usuario['senha'])) {
-                session_start();
                 $_SESSION['usuario_id'] = $usuario['id'];
-                header("Location: public/inicio.html");
+                   echo "<script>
+                        alert('Você estrou com sucesso!');
+                        window.location.href = 'public/inicio.php';
+                      </script>";
                 exit;
             } else {
                 $erroSenha = "Senha incorreta.";
@@ -52,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
