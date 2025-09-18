@@ -6,30 +6,29 @@ $user = "root";
 $password = "root";
 $db = "login_system";
 
-
 $mysqli = new mysqli($host, $user, $password, $db);
 
 if ($mysqli->connect_error) {
     die("Falha na conexão: " . $mysqli->connect_error);
 }
 
-$erroEmail="";
-$erroSenha="";
-$email="";
+$erroEmail = "";
+$erroSenha = "";
+$email = "";
 $valido = true;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"]);
     $senha = trim($_POST["senha"]);
-    $valido=true;
+    $valido = true;
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $erroEmail = "E-mail inválido.";
         $valido = false;
     }
 
-    if (strlen($senha) < 6) {
-        $erroSenha = "A senha deve ter pelo menos 6 caracteres.";
+    if (empty($senha)) {
+        $erroSenha = "A senha é obrigatória.";
         $valido = false;
     }
 
@@ -41,17 +40,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($resultado->num_rows === 1) {
             $usuario = $resultado->fetch_assoc();
-
-           if ($resultado->num_rows > 0) {
-            $_SESSION['usuario'] = $email;
-            header("Location: scripts/inicio.php"); // redireciona
-            exit();
+            
+            // Verificar a senha (supondo que está em texto plano no banco)
+            // Em um sistema real, você deve usar password_verify() com senhas hasheadas
+            if ($senha === $usuario['senha']) {
+                $_SESSION['usuario_id'] = $usuario['id'];
+                $_SESSION['usuario_email'] = $email;
+                header("Location: scripts/inicio.php");
+                exit();
+            } else {
+                $erroSenha = "Senha incorreta.";
+            }
         } else {
-            $erroSenha = "E-mail ou senha incorretos.";
+            $erroEmail = "E-mail não encontrado.";
         }
+        
+        $stmt->close();
     }
 }
-}
+
+$mysqli->close();
 ?>
 
 <!DOCTYPE html>
@@ -69,23 +77,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
-      <div class="container">
+    <div class="container">
         <h1>RailTrack</h1>
-        <img id="ft" src="assets/trem.png" alt="">
+        <img id="ft" src="assets/trem.png">
+        
+        <form method="POST" action="">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value="<?= htmlspecialchars($email) ?>" required>
+               <br> <span class="erro"><?= $erroEmail ?></span>
+            </div>
 
-    <form id="formulario" method="POST" action="">
-        <label>Email:</label><br>
-        <input type="text" name="email" value="<?= isset($email) ? htmlspecialchars($email) : '' ?>"><br>
-        <span class="erro"><?= $erroEmail ?></span><br>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" required>
+               <br> <span class="erro"><?= $erroSenha ?></span>
+            </div>
 
-        <label>Senha:</label><br>
-        <input type="password" name="senha"><br>
-        <span class="erro"><?= $erroSenha ?></span><br><br>
-
-        <button type="submit">Login</button>
-    </form>
-        <a href="public/recsenha.html">Esqueci minha senha</a>
-
-        <a href="public/criarconta.html">Criar Conta</a>
+            <button type="submit">Login</button>
+        </form>
+        
+        <div class="links">
+            <a href="public/recsenha.html">Esqueci minha senha</a>
+            <br>
+            <a href="public/criarconta.html">Criar Conta</a>
+        </div>
+    </div>
 </body>
 </html>
