@@ -44,12 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
            if ($resultado->num_rows > 0) {
             $_SESSION['usuario'] = $email;
-            header("Location: inicio.php"); // redireciona
+            header("Location: scripts/inicio.php"); // redireciona
             exit();
         } else {
             $erroSenha = "E-mail ou senha incorretos.";
         }
     }
+}
 }
 ?>
 
@@ -58,7 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel ="stylesheet" href="../styles/pstyle.css">
+    <link rel ="stylesheet" href="styles/pstyle.css">
+    <script src="scripts/senha.php"></script>
     <style>
         .erro {
             color: red;
@@ -67,7 +69,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
-    <form method="POST" action="">
+      <div class="container">
+        <h1>RailTrack</h1>
+        <img id="ft" src="assets/trem.png" alt="">
+
+    <form id="formulario" method="POST" action="">
         <label>Email:</label><br>
         <input type="text" name="email" value="<?= isset($email) ? htmlspecialchars($email) : '' ?>"><br>
         <span class="erro"><?= $erroEmail ?></span><br>
@@ -78,5 +84,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit">Login</button>
     </form>
+        <a href="public/recsenha.html">Esqueci minha senha</a>
+
+        <a href="public/criarconta.html">Criar Conta</a>
 </body>
 </html>
