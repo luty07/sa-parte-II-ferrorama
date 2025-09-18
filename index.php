@@ -40,9 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($resultado->num_rows === 1) {
             $usuario = $resultado->fetch_assoc();
-            
-            // Verificar a senha (supondo que está em texto plano no banco)
-            // Em um sistema real, você deve usar password_verify() com senhas hasheadas
+
             if ($senha === $usuario['senha']) {
                 $_SESSION['usuario_id'] = $usuario['id'];
                 $_SESSION['usuario_email'] = $email;
