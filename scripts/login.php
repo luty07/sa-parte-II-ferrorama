@@ -1,52 +1,53 @@
 <?php
+session_start();
+
 $host = "localhost";
 $user = "root";
 $password = "root";
-$db = "login_system"; 
+$db = "login_system";
+
+
 $mysqli = new mysqli($host, $user, $password, $db);
 
-if($mysqli->connect_error) {
+if ($mysqli->connect_error) {
     die("Falha na conexão: " . $mysqli->connect_error);
 }
 
-$erroEmail = "";
-$erroSenha = "";
+$erroEmail="";
+$erroSenha="";
+$email="";
 $valido = true;
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"]);
     $senha = trim($_POST["senha"]);
+    $valido=true;
 
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $erroEmail = "E-mail inválido.";
         $valido = false;
     }
 
-    if(strlen($senha) < 6){
+    if (strlen($senha) < 6) {
         $erroSenha = "A senha deve ter pelo menos 6 caracteres.";
         $valido = false;
     }
 
-    if($valido){
+    if ($valido) {
         $stmt = $mysqli->prepare("SELECT id, senha FROM usuarios WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $resultado = $stmt->get_result();
 
-        if($resultado->num_rows === 1){
+        if ($resultado->num_rows === 1) {
             $usuario = $resultado->fetch_assoc();
 
-            if(password_verify($senha, $usuario['senha'])){
-                session_start();
-                $_SESSION['usuario_id'] = $usuario['id'];
-                header("Location: public/inicio.html");
-                exit;
-            } else {
-                $erroSenha = "Senha incorreta.";
-            }
+           if ($resultado->num_rows > 0) {
+            $_SESSION['usuario'] = $email;
+            header("Location: inicio.php"); // redireciona
+            exit();
         } else {
-            $erroEmail = "Usuário não encontrado.";
+            $erroSenha = "E-mail ou senha incorretos.";
         }
     }
 }
@@ -57,8 +58,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel ="stylesheet" href="../styles/pstyle.css">
     <style>
-        .erro { color: red; font-size: 0.9em; }
+        .erro {
+            color: red;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
