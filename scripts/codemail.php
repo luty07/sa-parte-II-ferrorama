@@ -1,19 +1,19 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAILTRACK</title>
     <link rel="stylesheet" href="../styles/pstyle.css">
 </head>
-
 <body>
     <div class="container">
         <h1>Um código foi enviado para o seu e-mail, use ele como senha.</h1>
         <a href="../index.php"><button>Continuar</button></a>
     </div>
-
 </body>
-
 </html>
