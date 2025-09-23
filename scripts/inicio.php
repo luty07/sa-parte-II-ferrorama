@@ -23,34 +23,34 @@ session_start();
     <br>
 
     <div class="menu-item">
-      <a href="historico.html"><img src="../assets/historico.jpg" alt="Histórico"></a>
+      <a href="historico.php"><img src="../assets/historico.jpg" alt="Histórico"></a>
       <p>HISTÓRICO DE ROTAS</p>
 
     </div>
 
     <div class="menu-item">
-      <a href="destinos.html"><img src="../assets/treminicio.jpg" alt="Destinos e Horários"></a>
+      <a href="destinos.php"><img src="../assets/treminicio.jpg" alt="Destinos e Horários"></a>
       <p>DESTINOS E HORÁRIOS</p>
 
     </div>
 
     <div class="menu-item">
-      <a href="rotas.html"><img src="../assets/rotas.jpg" alt="Manutenção"></a>
+      <a href="rotas.php"><img src="../assets/rotas.jpg" alt="Manutenção"></a>
       <p>ROTAS</p>
     </div>
 
     <div class="menu-item">
-      <a href="manutencao.html"><img src="../assets/manutencao.jpg" alt="Manutenção"></a>
+      <a href="manutencao.php"><img src="../assets/manutencao.jpg" alt="Manutenção"></a>
       <p>MANUTENÇÃO</p>
     </div>
 
     <div class="menu-item">
-      <a href="relatorios.html"><img src="../assets/relatorioseanalises.jpg" alt="Relatórios e Análises"></a>
+      <a href="relatorios.php"><img src="../assets/relatorioseanalises.jpg" alt="Relatórios e Análises"></a>
       <p>RELATÓRIOS E ANÁLISES</p>
     </div>
 
     <div class="menu-item">
-      <a href="alerts.html"><img src="../assets/alertsenots.jpg" alt="Alertas e Notificações"></a>
+      <a href="alerts.php"><img src="../assets/alertsenots.jpg" alt="Alertas e Notificações"></a>
       <p>ALERTAS E NOTIFICAÇÕES</p>
     </div>
   </div>
