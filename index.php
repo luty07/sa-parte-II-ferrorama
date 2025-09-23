@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($senha === $usuario['senha']) {
                 $_SESSION['usuario_id'] = $usuario['id'];
                 $_SESSION['usuario_email'] = $email;
-                header("Location: scripts/inicio.php");
+                header("Location: scripts/boasvindas.php");
                 exit();
             } else {
                 $erroSenha = "Senha incorreta.";
