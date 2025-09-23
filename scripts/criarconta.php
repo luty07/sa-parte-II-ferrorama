@@ -4,7 +4,7 @@ session_start();
 $host = "localhost";
 $user = "root";
 $password = "root";
-$db = "login_system"; 
+$db = "railtrack_db"; 
 $mysqli = new mysqli($host, $user, $password, $db);
 
 
