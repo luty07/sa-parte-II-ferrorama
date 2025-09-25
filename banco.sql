@@ -37,8 +37,9 @@ CREATE TABLE alertas (
 );
 
 INSERT INTO usuarios (nome, email, senha) VALUES
-('Maria', 'maria@email.com', '1234'),
-('João', 'joao@email.com', 'abcd');
+('Maria', 'maria@email.com', '123456'),
+('robot', 'robo@email.com', 'senhasenha'),
+('João', 'joao@email.com', 'abcdef');
 
 INSERT INTO trens (codigo, modelo, capacidade) VALUES
 ('T001', 'Modelo A', 300),

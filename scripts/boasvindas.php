@@ -1,5 +1,12 @@
+<?php
+
+// railtrack.php
+
+?>
+
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +16,11 @@
 </head>
 
 <body>
+
     <div class="container">
-        <h1>Um código foi enviado para o seu e-mail, use ele como senha.</h1>
-        <a href="../index.html"><button>Continuar</button></a>
+        <h1>Bem-vindo(a) ao RailTrack!</h1>
+        <a href="../scripts/inicio.php"><button>Continuar</button></a>
     </div>
-
+    
 </body>
-
 </html>
