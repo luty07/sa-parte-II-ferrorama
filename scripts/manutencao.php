@@ -1,3 +1,10 @@
+<?php
+
+// railtrack.php
+
+?>
+
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -19,7 +26,7 @@
             SETOR 1 ➤ SETOR 3</h1>
         </div>
         <div>
-            <a href="manutencao1.html">
+            <a href="manutencao1.php">
                 <button id="manut" type="button" onclick=>Acessar</button>
             </a>
         </div>
@@ -30,7 +37,7 @@
             SETOR 2 ➤ SETOR 5</h1>
         </div>
         <div>
-            <a href="manutencao2.html">
+            <a href="manutencao2.php">
                 <button id="manut" type="button" onclick=>Acessar</button>
             </a>
         </div>
@@ -41,7 +48,7 @@
             SETOR 4 ➤ SETOR 2</h1>
         </div>
         <div>
-            <a href="manutencao3.html">
+            <a href="manutencao3.php">
                 <button id="manut" type="button" onclick=>Acessar</button>
             </a>
         </div>
@@ -52,7 +59,7 @@
             SETOR 5 ➤ SETOR 1</h1>
         </div>
         <div>
-            <a href="manutencao4.html">
+            <a href="manutencao4.php">
                 <button id="manut" type="button" onclick=>Acessar</button>
             </a>
         </div>
