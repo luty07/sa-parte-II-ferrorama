@@ -27,13 +27,13 @@ session_start();
     </div>
 
     <div class="menu-item">
-      <a href="../public/destinos.html"><img src="../assets/treminicio.jpg" alt="Destinos e Horários"></a>
+      <a href="destinos.php"><img src="../assets/treminicio.jpg" alt="Destinos e Horários"></a>
       <p>DESTINOS E HORÁRIOS</p>
 
     </div>
 
     <div class="menu-item">
-      <a href="../public/rotas.html"><img src="../assets/rotas.jpg" alt="Manutenção"></a>
+      <a href="rotas.php"><img src="../assets/rotas.jpg" alt="Manutenção"></a>
       <p>ROTAS</p>
     </div>
 
@@ -43,7 +43,7 @@ session_start();
     </div>
 
     <div class="menu-item">
-      <a href="../public/relatorios.html"><img src="../assets/relatorioseanalises.jpg" alt="Relatórios e Análises"></a>
+      <a href="relatorios.php"><img src="../assets/relatorioseanalises.jpg" alt="Relatórios e Análises"></a>
       <p>RELATÓRIOS E ANÁLISES</p>
     </div>
 
