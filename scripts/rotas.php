@@ -1,0 +1,60 @@
+<?php
+
+// railtrack.php
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTAS</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+     <div id="cabecalho">
+  	<a href="../scripts/inicio.php"><button>↩</button></a>
+</div>  
+<br>
+    <div class="containerd">
+        <h1>ROTAS</h1>
+        <hr>
+    </div>
+    <br>
+    <section>
+        <h1>SETOR 1 ➤ SETOR 3</h1>
+        <a href="rota1.php">
+            <button id="manut" type="button" onclick=>Acessar</button>
+        </a>
+    </section>
+    </div>
+    <br>
+    <section>
+        <h1>SETOR 2 ➤ SETOR 5</h1>
+        <a href="rota2.php">
+            <button id="manut" type="button" onclick=>Acessar</button>
+        </a>
+    </section>
+    </div>
+    <br>
+    <section>
+        <h1>SETOR 4 ➤ SETOR 2</h1>
+        <a href="rota3.php">
+            <button id="manut" type="button" onclick=>Acessar</button>
+        </a>
+    </section>
+    </div>
+    <br>
+    <section>
+        <h1>SETOR 5 ➤ SETOR 1</h1>
+        <a href="rota4.php">
+            <button id="manut" type="button" onclick=>Acessar</button>
+        </a>
+    </section>
+    </div>
+</body>
+
+</html>
