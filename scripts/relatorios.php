@@ -1,3 +1,9 @@
+<?php
+
+// railtrack.php
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -21,7 +27,7 @@
         <section>
             <h1>
                 ➤ VISÃO GERAL</h1>
-            <a href="relatorios1.html">
+            <a href="relatorios1.php">
                 <button id="manut" type="button" onclick=>Acessar</button>
             </a>
     </div>
@@ -32,7 +38,7 @@
             ➤ DESEMPENHO</h1>
         </div>
         <div>
-            <a href="relatorios2.html">
+            <a href="relatorios2.php">
                 <button id="manut" type="button" onclick=>Acessar</button>
             </a>
         </div>

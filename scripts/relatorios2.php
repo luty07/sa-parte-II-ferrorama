@@ -1,3 +1,9 @@
+<?php
+
+// railtrack.php
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -10,7 +16,7 @@
 
 <body>
    <div id="cabecalhooo">
-  	<a href="relatorios.html"><button>↩</button></a>
+  	<a href="relatorios.php"><button>↩</button></a>
 </div>
   <img src="../assets/relatorio3-removebg-preview.png" alt="" class="img-trem">
   <img src="../assets/relatorio4-removebg-preview.png" alt="" class="img-trem">
