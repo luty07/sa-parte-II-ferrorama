@@ -38,7 +38,7 @@ session_start();
     </div>
 
     <div class="menu-item">
-      <a href="../public/manutencao.html"><img src="../assets/manutencao.jpg" alt="Manutenção"></a>
+      <a href="manutencao.php"><img src="../assets/manutencao.jpg" alt="Manutenção"></a>
       <p>MANUTENÇÃO</p>
     </div>
 
