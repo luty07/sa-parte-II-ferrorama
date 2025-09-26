@@ -96,9 +96,9 @@ $mysqli->close();
         </form>
         
         <div class="links">
-            <a href="public/recsenha.html">Esqueci minha senha</a>
+            <a href="scripts/recsenha.php">Esqueci minha senha</a>
             <br>
-            <a href="public/criarconta.html">Criar Conta</a>
+            <a href="scripts/criarconta.php">Criar Conta</a>
         </div>
     </div>
 </body>
