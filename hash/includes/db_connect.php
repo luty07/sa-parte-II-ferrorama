@@ -3,7 +3,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "root";
-    $dbname = "banco_sabado";
+    $db = "railtrack_db";
 
     try {
         $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username, $password);
