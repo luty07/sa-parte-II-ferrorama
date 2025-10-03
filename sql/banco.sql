@@ -6,6 +6,7 @@ CREATE TABLE usuarios (
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(120) NOT NULL UNIQUE,
     senha VARCHAR(100) NOT NULL
+    foto_perfil VARCHAR(255) DEFAULT 'default.jpg'
 );
 
 CREATE TABLE trens (
