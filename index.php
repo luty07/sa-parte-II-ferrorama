@@ -99,6 +99,8 @@ $mysqli->close();
             <a href="scripts/recsenha.php">Esqueci minha senha</a>
             <br>
             <a href="scripts/criarconta.php">Criar Conta</a>
+            <br>
+            <a href="scripts/userconfig.php">userconfig</a>
         </div>
     </div>
 </body>
