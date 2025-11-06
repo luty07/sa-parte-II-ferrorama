@@ -37,10 +37,10 @@ CREATE TABLE alertas (
     data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO usuarios (nome, email, senha) VALUES
-('Maria', 'maria@email.com', '123456'),
-('robot', 'robo@email.com', 'senhasenha'),
-('João', 'joao@email.com', 'abcdef');
+INSERT INTO usuarios (nome, email, senha, CEP) VALUES
+('Maria', 'maria@email.com', '123456', "69850-970"),
+('robot', 'robo@email.com', 'senhasenha', "69850-970"),
+('João', 'joao@email.com', 'abcdef', "69850-970");
 
 INSERT INTO trens (codigo, modelo, capacidade) VALUES
 ('T001', 'Modelo A', 300),

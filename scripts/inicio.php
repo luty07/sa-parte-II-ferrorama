@@ -6,6 +6,15 @@ session_start();
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<header >
+  
+</header>
+
+<div id="user">
+<p>ssss</p>
+
+</div>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +60,9 @@ session_start();
       <a href="alerts.php"><img src="../assets/alertsenots.jpg" alt="Alertas e Notificações"></a>
       <p>ALERTAS E NOTIFICAÇÕES</p>
     </div>
-  </div>
+ 
+
+</div>
 
 </body>
 
