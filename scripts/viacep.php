@@ -31,11 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Consulta de CEP - RailTrack</title>
-    <link rel="stylesheet" href="style.css">
+    <title>RAILTRACK</title>
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <h2>Consulta de CEP - RailTrack</h2>
+    <h2>Consulta de CEP - RAILTRACK</h2>
 
     <form method="POST" action="">
         <label for="cep">Digite o CEP:</label><br>

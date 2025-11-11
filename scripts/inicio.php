@@ -10,10 +10,7 @@ session_start();
   
 </header>
 
-<div id="user">
-<p>ssss</p>
 
-</div>
 
 <head>
   <meta charset="UTF-8">
@@ -32,6 +29,12 @@ session_start();
     <div class="menu-item">
       <a href="historico.php"><img src="../assets/historico.jpg" alt="Histórico"></a>
       <p>HISTÓRICO DE ROTAS</p>
+
+    </div>
+
+    <div class="menu-item">
+      <a href="viacep.php"><img src="../assets/cep.png" alt="verificar"></a>
+      <p>VERIFICAR CEP</p>
 
     </div>
 
