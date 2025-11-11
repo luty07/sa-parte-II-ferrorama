@@ -1,3 +1,10 @@
+<?php
+
+// railtrack.php
+
+?>
+
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -9,7 +16,7 @@
 
 <body>
      <div id="cabecalho">
-  	<a href="rotas.html"><button>↩</button></a>
+  	<a href="rotas.php"><button>↩</button></a>
 </div>
 <br>
     <h1>SETOR 4 ➤ SETOR 2</h1>

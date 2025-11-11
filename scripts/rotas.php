@@ -1,3 +1,10 @@
+<?php
+
+// railtrack.php
+
+?>
+
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -9,7 +16,7 @@
 </head>
 <body>
      <div id="cabecalho">
-  	<a href="inicio.html"><button>↩</button></a>
+  	<a href="../scripts/inicio.php"><button>↩</button></a>
 </div>  
 <br>
     <div class="containerd">
@@ -19,7 +26,7 @@
     <br>
     <section>
         <h1>SETOR 1 ➤ SETOR 3</h1>
-        <a href="rota1.html">
+        <a href="rota1.php">
             <button id="manut" type="button" onclick=>Acessar</button>
         </a>
     </section>
@@ -27,7 +34,7 @@
     <br>
     <section>
         <h1>SETOR 2 ➤ SETOR 5</h1>
-        <a href="rota2.html">
+        <a href="rota2.php">
             <button id="manut" type="button" onclick=>Acessar</button>
         </a>
     </section>
@@ -35,7 +42,7 @@
     <br>
     <section>
         <h1>SETOR 4 ➤ SETOR 2</h1>
-        <a href="rota3.html">
+        <a href="rota3.php">
             <button id="manut" type="button" onclick=>Acessar</button>
         </a>
     </section>
@@ -43,7 +50,7 @@
     <br>
     <section>
         <h1>SETOR 5 ➤ SETOR 1</h1>
-        <a href="rota4.html">
+        <a href="rota4.php">
             <button id="manut" type="button" onclick=>Acessar</button>
         </a>
     </section>

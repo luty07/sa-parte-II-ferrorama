@@ -6,6 +6,15 @@ session_start();
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<header >
+  
+</header>
+
+<div id="user">
+<p>ssss</p>
+
+</div>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,23 +36,23 @@ session_start();
     </div>
 
     <div class="menu-item">
-      <a href="../public/destinos.html"><img src="../assets/treminicio.jpg" alt="Destinos e Horários"></a>
+      <a href="destinos.php"><img src="../assets/treminicio.jpg" alt="Destinos e Horários"></a>
       <p>DESTINOS E HORÁRIOS</p>
 
     </div>
 
     <div class="menu-item">
-      <a href="../public/rotas.html"><img src="../assets/rotas.jpg" alt="Manutenção"></a>
+      <a href="rotas.php"><img src="../assets/rotas.jpg" alt="Manutenção"></a>
       <p>ROTAS</p>
     </div>
 
     <div class="menu-item">
-      <a href="../public/manutencao.html"><img src="../assets/manutencao.jpg" alt="Manutenção"></a>
+      <a href="manutencao.php"><img src="../assets/manutencao.jpg" alt="Manutenção"></a>
       <p>MANUTENÇÃO</p>
     </div>
 
     <div class="menu-item">
-      <a href="../public/relatorios.html"><img src="../assets/relatorioseanalises.jpg" alt="Relatórios e Análises"></a>
+      <a href="relatorios.php"><img src="../assets/relatorioseanalises.jpg" alt="Relatórios e Análises"></a>
       <p>RELATÓRIOS E ANÁLISES</p>
     </div>
 
@@ -51,7 +60,9 @@ session_start();
       <a href="alerts.php"><img src="../assets/alertsenots.jpg" alt="Alertas e Notificações"></a>
       <p>ALERTAS E NOTIFICAÇÕES</p>
     </div>
-  </div>
+ 
+
+</div>
 
 </body>
 

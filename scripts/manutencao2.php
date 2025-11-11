@@ -1,3 +1,10 @@
+<?php
+
+// railtrack.php
+
+?>
+
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,7 +17,7 @@
 
 <body>
       <div id="cabecalhooo">
-  	<a href="manutencao.html"><button>↩</button></a>
+  	<a href="manutencao.php"><button>↩</button></a>
 </div>
 <br>
     <section>
