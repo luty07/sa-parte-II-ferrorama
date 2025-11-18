@@ -16,7 +16,7 @@ $alertas = [
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alertas e Notificações</title>
-  <link rel="stylesheet" href="../styles/alerts.css">
+  <link rel="stylesheet" href="../styles/pstyle.css">
 </head>
 
 <body>
@@ -34,10 +34,12 @@ $alertas = [
 
     <main id="alertsList">
       <?php foreach ($alertas as $texto): ?>
+        <section>
         <div class="alert-item">
           <div class="timeline"></div>
           <div class="alert-text"><?= htmlspecialchars($texto) ?></div>
         </div>
+      </section>
       <?php endforeach; ?>
     </main>
 
