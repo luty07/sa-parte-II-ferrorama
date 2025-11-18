@@ -6,7 +6,7 @@ use Bluerhinos\phpMQTT;
 
 $server = "f518a08331f047ffaba17f3a43c5066c.s1.eu.hivemq.cloud"; 
 $port = 8883;
-$username = “placa2-helena"; 
+$username = "placa2-helena"; 
 $password = "Helena2025";   
 $client_id = "railtrack_php_client_" . rand();
 
