@@ -1,0 +1,109 @@
+DOCUMENTAÇÃO - RAILTRACK
+
+INTRODUÇÃO
+
+O RailTrack foi criado como um sistema simples e funcional, pensado para simular o funcionamento de um ambiente ferroviário digital. A ideia principal é permitir que o usuário acompanhe informações importantes, visualize eventos em tempo real e navegue entre diferentes partes do sistema sem dificuldades. Durante o desenvolvimento, o foco foi criar telas claras, intuitivas e integradas, para que qualquer pessoa consiga usar mesmo sem muito conhecimento técnico. Além disso, o sistema conversa com placas físicas, o que deixa tudo mais próximo de uma aplicação real.
+
+OBJETIVO GERAL DO SISTEMA
+
+O propósito do RailTrack vai além de apenas exibir telas. Ele foi projetadp para demonstrar, de forma prática, como funciona a autenticação de usuários, o registro de eventos, a interação entre software e hardware e o controle básico de dados. Ele ajuda a entender a lógica de um sistema organizado, em que cada parte possui uma função e contribui para o funcionamento geral.
+
+ESTRUTURA DO SISTEMA
+
+Ao entrar no RailTrack, o usuário encontra um conjunto de telas que formam o fluxo principal de uso. Cada uma delas cumpre um papel específico e contribui para a experiência completa.
+
+A tela de login é a porta de entrada. Nela, o usuário informa seus dados e, caso estejam corretos, já é levado para o sistema. Mesmo sendo simples, essa etapa garante segurança e controle de acesso. Caso o usuário esqueça a senha, existe uma opção rápida para solicitar recuperação por e‑mail. Se for a primeira vez utilizando o RailTrack, é possível criar uma nova conta através de um formulário direto e objetivo.
+
+Depois de entrar, o usuário é recebido pela tela “Bem‑vindo ao RailTrack!”, que funciona como uma apresentação geral. Ela resume o que o sistema oferece e orienta sobre os próximos passos. É uma forma de deixar tudo mais intuitivo, principalmente para quem está acessando pela primeira vez.
+
+Outra parte essencial é a tela de Histórico. Nela são exibidos os registros enviados pelas placas integradas ao sistema. Esses registros permitem acompanhar acontecimentos importantes, entender o que está ocorrendk nas placas e verificar a ordem em que cada evento aconteceu. O histórico acaba sendo uma ferramenta fundamental para monitoramento e análise.
+
+INTEGRAÇÃO DO SISTEMA
+
+Um dos diferenciais do RailTrack é a comunicação com as placas S1, S2, S3 e S4. Essas placas simulam sensores e dispositivos reais. Elas enviam dados para o sistema, recebem comandos e interagem entre si através do protocolo MQTT. Isso faz com que o projeto não seja apenas visual, mas também dinâmico.
+
+A placa S3, por exemplo, é responsável por detectar presença, controlar servos e um LED. Sempre que alguém passa pelo sensor, ela envia essa informação. Também recebe comandos do sistema, como o movimento dos servos. Essa troca contínua transforma o RailTrack em um ambientr que lembra bastante sistemas de automação do mundo real.
+
+ARQUITETURA GERAL
+
+A estrutura do RailTrack foi organizada de forma clara. A parte visual foi construída com páginas bem distribuídas, com elementos fáceis de localizar e entender. A comunicação interna utiliza MQTT para garantir que as placas e o sistema se conectem rapidamente. Mesmo não usando um backend completo, foram criadas validações e simulações suficientes para reproduzir o funcionamento típico de um sistema real.
+
+COMO
+
+O uso é simples. Primeiro, basta acessar a página inicial e fazer login ou criar uma conta. Depois, o usuário é direcionado para a tela principal, onde consegue visualizar as opções disponíveis. O histórico pode ser consultado a qualquer momento para acompanhar os eventos gerados pelas placas. Caso queira explorar mais, é possível observar como o sistema reage a diferentes ações das placas conectadas.
+
+REQUISITOS DO SISTEMA
+
+Os requisitos do RailTrack ajudam a definir claramente o que o sistema deve realizat e como deve se comportar. Eles orientam o desenvolvimento e garantem que todas as funções essenciais estejam presentes.
+
+REQUISITOS FUNCIONAIS
+
+Os requisitos funcionais descrevem o que o sistema realmente faz:
+
+* O sistema deve permitir que o usuário faça login utilizando e-mail e senha.
+* O usuário deve conseguir criar uma nova conta sempre que necessário.
+* Deve existir a opção de recuperação de senha por meio do e-mail informado.
+* Após o login, o sistema deve exibir a tela inicial com as principais orientações.
+* Deve ser possível acessar o histórico de eventos registrados pelas placas.
+* O sistema deve receber informações enviadas pelas placas (S1, S2, S3, S4) através de MQTT.
+* O sistema deve exibir os eventos recebidos em ordem cronológica.
+* O sistema deve simular validações básicas de entrada, como campos obrigatórios.
+
+REQUISITOS NAO FUNCIONAIS
+
+Esses requisitos definem características gerais do sistema:
+
+* A interface deve ser simples, clara e fácil de navegar.
+* O tempo de resposta deve ser rápido o suficiente para exibir novos registros sem atraso significativo.
+* A comunicação via MQTT deve ser estável e contínua.
+* O sistema deve funcionar corretamente em navegadores atuais.
+* As telas devem ser responsivas e manter boa legibilidade.
+
+CASOS DE USO
+
+Os casos de uso descrevem as ações que o usuárip realiza no sistema e o que o sistema faz em resposta. Eles ajudam a visualizar o comportamento geral do RailTrack.
+
+1: LOGIN
+
+ATOR: Usuário
+
+FLUXO:
+
+1. O usuário acessa a página inicial.
+2. Digita e-mail e senha.
+3. Clica em “Entrar”.
+4. O sistema verifica as informações.
+5. Se estiverem corretas, o usuário é direcionado para a tela “Bem-vindo ao RailTrack!”.
+
+2: CRIAR CONTA
+
+ATOR: Novo usuário
+
+FLUXO:
+
+1. O usuário abre a página de criação de conta.
+2. Preenche nome, e-mail e senha.
+3. Confirma o cadastro.
+4. O sistema valida os dados.
+5. Em caso de sucesso, o usuário pode realizar login.
+
+3: RECUPERAR SENHA
+
+ATOR: Usuário com acesso perdido
+
+FLUXO:
+
+1. O usuário acessa “Esqueci minhs senha”.
+2. Digita o e-mail cadastrado.
+3. Solicita recuperação.
+4. O sistema envia instruções para o e-mail informado.
+
+4: VISUALIZAR HISTÓRICO
+
+ATOR: Usuário autenticado
+
+FLUXO:
+
+1. Após o login, o usuário acessa a opção “Histórico”.
+2. O sistema exibe os eventos recebidos das placaw.
+3. Os registros aparecem em ordem cronológica para facilitar a análise.
